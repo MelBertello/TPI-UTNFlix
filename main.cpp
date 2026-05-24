@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
+    int codigos[8];
+    string  nombres[8]={""};
     int opcion;
     do{
     mostrarmenu();
@@ -11,6 +13,8 @@ int main()
     if (opcion>=0 && opcion<=5){
     switch(opcion){
     case 1:
+        cout << "Seleccionaste la opcion numero 1: ";
+        cargargeneros(codigos, nombres);
     break;
     case 2:
     break;

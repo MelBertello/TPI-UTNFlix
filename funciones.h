@@ -8,5 +8,5 @@ using namespace std;
 
 // Prototipos de funciones
 void mostrarmenu();
-
+void cargargeneros(int codigos[], string nombres[]);
 #endif
