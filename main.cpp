@@ -16,6 +16,11 @@ int main()
     int duraciones[15] = {0};
     float puntajes[15] = {0.0};
     int codGenerosCont[15] = {0};
+    //lote 3
+    int codSus[12];
+    int cantPan[12];
+    string nomSus[12] = {" "};
+    char planes[12] = {' '};
 
     do{
     mostrarmenu();
@@ -23,7 +28,7 @@ int main()
     if (opcion>=0 && opcion<=5){
     switch(opcion){
     case 1:
-        cout << "Seleccionaste la opcion numero 1: ";
+        cout << "Seleccionaste la opcion numero 1: " << endl;
         lotegeneroscargado= cargargeneros(codigos, nombres);
     break;
     case 2:
@@ -31,6 +36,8 @@ int main()
         cargarcontenidos(lotegeneroscargado, codigosCont, titulos, tipos, duraciones, puntajes, codGenerosCont, codigos);
     break;
     case 3:
+        cout << "Seleccionaste la opcion numero 3: " << endl;
+       cargarsuscriptores( codSus,cantPan, nomSus,planes);
     break;
     case 4:
     break;

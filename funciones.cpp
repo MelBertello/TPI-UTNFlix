@@ -91,3 +91,38 @@ cout << "\n¡La carga del lote numero 2 se ha realizado con exito!" << endl;
 
 }
 
+void cargarsuscriptores(int codSus[], int cantPan[], string nomSus[],char planes[]){
+    int codsuscriptor, cantpantallas;
+    string nomsuscriptor;
+    char plan;
+for (int i=0; i<12; i++){
+
+    cout << "Ingrese el codigo de suscriptor (1 a 12)" << endl;
+    cin >> codsuscriptor;
+    if (codsuscriptor<1 || codsuscriptor>12){
+        cout << "El codigo ingresado es invalido. Debe ingresar un codigo entre el 1 y el 12" << endl;
+        return;
+    }
+    cout << "Ingrese el nombre y apellido del suscriptor" << endl;
+    cin >> nomsuscriptor;
+    cout << "Ingrese el plan de suscriptor (B = Basico, S = Estandar, P = Premium. Solo se aceptan estos valores.)" << endl;
+    cin >> plan;
+    if (plan!='B'||plan!='S'||plan!='P'){
+        cout << "El plan ingresado es incorrecto. Debe ingresar: B = Básico, S = Estándar, P = Premium."<< endl;
+        return;
+    }
+    cout << "Ingrese la cantidad de pantallas habilitadas segun el plan (1 a 4)" << endl;
+    cin >> cantpantallas;
+    if (cantpantallas<1 || cantpantallas>4 ){
+        cout << "El valor ingresado es incorrecta. La cantidad de pantallas debe ser un numero del 1 al 4" << endl;
+        return;
+    }
+    codSus[i]=codsuscriptor;
+cantPan[i]=cantpantallas;
+nomSus[i]=nomsuscriptor;
+planes[i]=plan;
+
+
+}
+
+}
