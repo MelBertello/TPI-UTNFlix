@@ -40,16 +40,25 @@ int main()
        cargarsuscriptores( codSus,cantPan, nomSus,planes);
     break;
     case 4:
-    break;
-    case 5:
-    break;
-    case 6:
-    break;
-    }
-    } else cout <<"El numero ingresado es incorrecto" << endl;
-    } while (opcion!=0);
+         cout << "Seleccionaste la opcion numero 4." << endl;
+                lotereproduccionescargado = cargarreproducciones(
+                    lotegeneroscargado, lotecontenidoscargado, lotesuscriptorcargado,
+                    codigosCont, tipos, duraciones, codGenerosCont,
+                    codSus, planes,
+                    repsPorContenido, compPorContenido,
+                    repsPorPlan, repsPorGenDia, repsPorSuscriptor);
+                break;
+            case 5:
+                break;
+            case 6:
+                cout << "Saliendo..." << endl;
+                break;
+            }
+        } else {
+            cout << "El numero ingresado es incorrecto." << endl;
+        }
 
-
+    } while (opcion != 6);
 
     return 0;
 }
